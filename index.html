@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        color: white;
+      }
+
+      header {
+        margin-top: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 9%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-size: 3rem;
+        color: #d5271e;
+        font-weight: bolder;
+        margin-left: -50px;
+      }
+      .logo:hover {
+        transform: scale(1, 1);
+        transition: 0.5s;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 50px;
+      }
+
+      nav ul li {
+        list-style-type: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        transition: 0.3s ease;
+        font-size: 30px;
+        border-bottom: 3px solid transparent;
+      }
+
+      nav ul li a:hover,
+      nav ul li a:active {
+        color: #d5271e;
+        border-bottom: 3px solid #d5271e;
+        border-radius: 10px;
+      }
+
+      section {
+        min-height: 100vh;
+        padding-bottom: 110px;
+      }
+
+      .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        background-color: black;
+      }
+
+      .home h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .home h3 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .home-image {
+        border-radius: 50%;
+      }
+
+      .home-image img {
+        position: relative;
+        width: 32vw;
+        margin-bottom: 0px;
+        height: 600px;
+        border-radius: 50%;
+        box-shadow: 0 0 25px solid;
+      }
+
+      img:hover {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      .home-text {
+        font-size: 30px;
+      }
+
+      .home-text h1 span {
+        color: #d5271e;
+      }
+
+      .home-text h3 span {
+        color: #d5271e;
+      }
+
+      .home-button {
+        background-color: black;
+        color: #d5271e;
+        width: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+        border: 2px solid #d5271e;
+        border-radius: 50px;
+        height: 50px;
+      }
+
+      .home-button:hover {
+        background-color: #d5271e;
+        border: none;
+        color: black;
+        transition: 0.5s;
+      }
+
+      .about h1 span {
+        color: #d5271e;
+        line-height: 1.3;
+      }
+
+      .about {
+        background: linear-gradient(to bottom, #000000, #d5271e);
+        height: 100vh;
+        font-size: 20px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .about p {
+        text-align: center;
+        width: 800px;
+        font-size: 20px;
+        line-height: 2;
+        margin-top: 50px;
+      }
+
+      .about-button {
+        background-color: black;
+        color: #d5271e;
+        width: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+        border: 2px solid #d5271e;
+        border-radius: 50px;
+        height: 50px;
+        margin-top: 100px;
+      }
+
+      .about-button:hover {
+        background-color: #d5271e;
+        border: none;
+        color: black;
+        transition: 0.5s;
+      }
+
+      .education {
+        background: linear-gradient(to top, #000000, #d5271e);
+        height: 100vh;
+        text-align: center;
+      }
+
+      .education h1 a {
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+      }
+
+      .sub-education {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        font-size: 30px;
+        margin-top: 100px;
+      }
+
+      .educa {
+        border: 2px solid #d5271e;
+        width: 400px;
+        height: 300px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+      }
+
+      .educa:hover {
+        background-color: #d5271e;
+        color: black;
+        transition: 0.5s;
+      }
+
+      .skills {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+        align-items: center;
+      }
+
+      .skills h1 a {
+        font-size: 50px;
+        color: white;
+      }
+
+      .sub-skill div {
+        margin-left: 10px;
+        display: flex;
+        gap: 70px;
+        font-size: 30px;
+        margin-top: 20px;
+        line-height: 1.9;
+      }
+
+      .sub1-skill {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1000px;
+      }
+
+      .sub1-skill button {
+        background-color: black;
+        color: #d5271e;
+        width: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+        border: 2px solid #d5271e;
+        border-radius: 50px;
+        height: 50px;
+        margin-top: 100px;
+      }
+
+      .sub1-skill button:hover {
+        background-color: #d5271e;
+        border: none;
+        color: black;
+        transition: 0.5s;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #333333;
+        height: 30vh;
+        display: grid;
+      }
+
+      footer h1 {
+        font-size: 40px;
+        padding-top: 50px;
+      }
+      footer h1 span a {
+        color: #720d07;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo" name="one">Fayez</a>
+      <nav>
+        <ul>
+          <li><a href="#one">Home</a></li>
+          <li><a href="#two">About</a></li>
+          <li><a href="#three">Education</a></li>
+          <li><a href="#four">Skills</a></li>
+          <li><a href="#five">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="home">
+      <div class="home-image">
+        <img src="picture.jpg" alt="" />
+      </div>
+      <div class="home-text">
+        <h1>Hi, It's <span>Fayez</span></h1>
+        <h3>I'm a <span>web developer</span></h3>
+        <p style="font-size: 20px; width: 700px; margin-top: 50px">
+          I have a passion for web development that drives me to create dynamic
+          and engaging websites. I enjoy the challenge of coding and the
+          satisfaction of bringing ideas to life through technology, constantly
+          learning new skills to enhance my craft
+        </p>
+        <button class="home-button">Hire me</button>
+      </div>
+    </section>
+    <div class="about">
+      <div>
+        <h1>
+          About <a href="" name="two"><span>Me</span></a>
+        </h1>
+        <h3>Web Developer</h3>
+        <p>
+          My name is Sayed Ali Fayez. I graduated from school in 2021, marking
+          the beginning of my academic journey in higher education. Currently, I
+          am a university student, where I am passionately exploring my interest
+          in web technology. My fascination with the digital world drives me to
+          learn about the latest trends and innovations in web development. I am
+          excited about the opportunities that lie ahead and eager to contribute
+          to the ever-evolving tech landscape.
+        </p>
+        <button class="about-button">See more</button>
+      </div>
+    </div>
+    <div class="education">
+      <h1><a href="" name="three">Education</a></h1>
+      <div class="sub-education">
+        <div class="educa">
+          <h3>School</h3>
+          <p>Abdul Ali Mustaghni High School</p>
+          <p>2009 - 2021</p>
+        </div>
+        <div class="educa">
+          <h3>University</h3>
+          <p>Kabul University</p>
+          <p>Period</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+      <div class="sub-skill">
+        <h1><a href="" name="four">Skills</a></h1>
+        <div>
+          <ul>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+          </ul>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Html</li>
+            <li>Css</li>
+            <li>Mysql</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub1-skill">
+        <button>Learn More</button>
+      </div>
+    </div>
+    <footer>
+      <h1>
+        Contact <span><a href="" name="five">Me</a></span>
+      </h1>
+      <h3>0731301922</h3>
+    </footer>
+  </body>
+</html>
